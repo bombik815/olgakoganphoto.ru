@@ -6,6 +6,7 @@ interface PortfolioCardProps {
   imageUrl: string;
   link: string;
   className?: string; // Добавляем className в интерфейс
+  onContextMenu?: (e: React.MouseEvent) => void; // Добавьте эту строку
 }
 
 const PortfolioCard: React.FC<PortfolioCardProps> = ({
@@ -26,6 +27,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-300"
+          onContextMenu={(e) => e.preventDefault()}
         />
       </motion.a>
 

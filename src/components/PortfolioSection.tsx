@@ -51,7 +51,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ cards }) => {
                 imageUrl={card.image}
                 link={card.link}
                 className="m-2 sm:m-0"
-                
+                onContextMenu={(e) => e.preventDefault()}
               />
             </motion.div>
           ))}
